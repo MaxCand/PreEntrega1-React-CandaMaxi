@@ -43,6 +43,11 @@ margin-left: 90px;
   align-items: center;
 }
 
+.header__Brand a {
+  text-decoration: none;
+  color: white;
+}
+
 .cartConteiner{
   display: flex;
   gap: 10px;
@@ -75,4 +80,10 @@ margin-left: 90px;
   display: flex;
   justify-content: center;
   padding-top: 20px;
+}
+
+.producto__descripcion {
+  max-width: 300px;
+ max-height: 250px;
+text-align: center;
 }
