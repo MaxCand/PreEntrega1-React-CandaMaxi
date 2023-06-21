@@ -16,6 +16,8 @@ const ItemDetailContainer = () => {
 
     const {itemId} = useParams()
     const [item, setItem] = useState(null)
+    const [loading, setLoading] = useState(true)
+
 
     console.log(item)
     console.log(itemId)
@@ -28,6 +30,7 @@ const ItemDetailContainer = () => {
         .catch((error) => {
             console.error(error)
         })
+        .finally(() => setLoading(false))
     }, [itemId])
 
 
@@ -35,7 +38,14 @@ const ItemDetailContainer = () => {
 
     return (
         <div className="container my-5">
-        <ItemDetail {...item}/>
+            
+        {
+            loading
+            ? <h2>Loading...</h2>
+            :<ItemDetail {...item}/>
+        
+        
+        }
         </div>
     )
 }
