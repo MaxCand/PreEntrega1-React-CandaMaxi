@@ -3,6 +3,7 @@ import ItemListContainer from "./components/ItemListContainer"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "./App.css"
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
+import ItemDetailContainer from "./components/ItemDetailContainer"
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
       <Route path="/" element={<ItemListContainer/>}/>
       <Route path="/categorias/:categoria" element={<ItemListContainer/>}/>
       <Route path="*" element={<Navigate to={"/"}/>}/>
-      <Route/>
+      <Route path="/item/:itemId" element={<ItemDetailContainer/>}/>
       <Route/>
 
 
